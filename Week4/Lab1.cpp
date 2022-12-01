@@ -3,10 +3,10 @@ using namespace std;
 
 class students{
 	public:
-		int RNo,Contact,total=0;
+		int RNo,Contact;
 		string Sname,Email;
 		float semGPA[8];
-		float TotalCGPA;
+		float TotalCGPA,total=0;
 	void getData()
 	{
 		cout<<"Enter Roll number: ";
@@ -28,12 +28,13 @@ class students{
 	{
 		cout<<"\nName: "<<Sname;
 		cout<<"\nRoll no: "<<RNo;
-		cout<<"\nCGPA: "<<TotalCGPA;
+		cout<<"\nCGPA: "<<TotalCGPA<<"\n";
+		cout<<"\n"<<Sname<<" has scored a CGPA of "<<TotalCGPA<<"\n";
 	}
 	void compute()
 	{
 		TotalCGPA=total/8;
-		cout<<"\n"<<Sname<<" has scored a CGPA of"<<TotalCGPA;
+		//cout<<"\n"<<Sname<<" has scored a CGPA of "<<TotalCGPA<<"\n";
 	}
 };
 	
