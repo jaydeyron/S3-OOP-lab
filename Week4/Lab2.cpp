@@ -14,7 +14,8 @@ class student{
 			cout<<"\n"<<Sname<<" has scored a CGPA of"<<TotalCGPA;
 		}
 	public:
-		int RNo,total=0;
+		int RNo;
+		float total=0;
 		string Sname;
 		student()
 		{
@@ -53,6 +54,11 @@ int main()
 	for(j=0;j<n;j++)
 	{
 		a[j].getData();
+		//a[j].putData();
+	}
+	for(j=0;j<n;j++)
+	{
 		a[j].putData();
+		cout<<"--------------------------------------------\n";
 	}
 }
