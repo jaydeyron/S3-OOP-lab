@@ -5,69 +5,68 @@ static int count=1;
 
 class employee{
     private:
-            void compute()
-            {
-                DA=Basic*0.52;
-                if(Basic<10000)
-                    IT=Basic*0;
-                else if(Basic<20000)
-                    IT=Basic*0.1;
-                else if(Basic<30000)
-                    IT=Basic*0.2;
-                else if(Basic<40000)
-                    IT=Basic*0.3;
-                NetSalary=(Basic+DA)-IT;
-                cout<<"\nDearness Allowance: "<<DA;
-                cout<<"\nIncome Tax: "<<IT;
-                cout<<"\nNet salary: "<<NetSalary;
-                
-            }
-
+        float it;
+        float da;
+        float netsal;
+        float basic;
+        void compute()
+        {
+            cout<<endl<<"Enter basic salary(within 40000): ";
+            cin>>basic;
+            da=basic*0.52;
+            if(basic<10000)
+                it=0;
+            else if(basic<20000)
+                it=basic*0.1;
+            else if(basic<30000)
+                it=basic*0.2;
+            else if(basic<40000)
+                it=basic*0.3;
+            netsal=(basic+da)-it;
+            cout<<"Dearness Allowance: "<<da<<endl<<"Income Tax: "<<it<<endl<<"Net Salary: "<<netsal<<endl;
+                    
+        }
+    
     public:
-            long int ENo;
-            float Basic, DA, IT, NetSalary;
-            string Ename;
+        int eno;
+        string ename;
+        
+        employee()
+        {
+            eno=count;
+            count++;
+        }
+        
+        void getdata()
+        {
+            cout<<endl<<"Enter employee name: ";
+            cin>>ename;
             
-            employee()
-            {
-                ENo=count++;
-            }
+        }
+        
+        void putdata()
+        {
+            cout<<endl<<"   EMPLOYEE DETAILS   "<<endl;
+            cout<<endl<<"Employee no : "<<eno;
+            cout<<endl<<"Employee name : "<<ename<<endl;
+            compute();
+        }
+        
+        ~employee()
+        {
+            cout<<"Data Destroyed\n";
+        }
+    
 
-            void getData()
-            {
-                cout<<"\nEnter Employee Name: ";
-                cin>>Ename;
-                cout<<"Enter Employee Number: "<<ENo;
-                cout<<"\nEnter Basic Salary(Btw 1000 and 40000): ";
-                cin>>Basic;
-            }
-            
-            void putData()
-            {
-                cout<<"\n\n______________________________________\n";
-                cout<<"\nEmployee "<<ENo<<" details:-\n";
-                cout<<"\nEmployee Name: "<<Ename;
-                cout<<"\nEmployee Number: "<<ENo;
-                cout<<"\nBasic Salary: "<<Basic;
-                compute();
-            }
-            
-            
 };
 
 int main()
 {
-    int i, n;
-    cout<<"Enter the number of employees(less than 10): ";
-    cin>>n;
-    employee emp[n];
-    for(i=0;i<n;i++)
-    {
-        emp[i].getData();
-    }
-    for(i=0;i<n;i++)
-    {
-        emp[i].putData();
-    }
-    cout<<"\n";
+int i;
+employee e[3];
+for(i=0;i<3;i++)
+{
+e[i].getdata();
+e[i].putdata();
+}
 }
