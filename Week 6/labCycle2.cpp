@@ -109,11 +109,11 @@ class cteacher
 			sum=(t.sb1a+t.sb2a+t.sb3a)/3;
 			if(sum<80)
 			{
-				t.ests="False";
+				t.ests="Ineligible";
 			}
 			else
 			{
-				t.ests="True";
+				t.ests="Eligible";
 			}
 		}
 			
