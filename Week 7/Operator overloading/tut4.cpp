@@ -22,7 +22,7 @@ class complex{
 			cout<<"Result:"<<endl;
 			cout<<r<<"+"<<i<<"i\n";
 		}
-		complex operator *(complex const &obj)
+		complex operator /(complex const &obj)
 		{
 			complex res(0,0);
 			res.r=(r*obj.r+i*obj.i)/(obj.r*obj.r+obj.i*obj.i);
@@ -34,6 +34,6 @@ class complex{
 int main()
 {
 	complex a,b,c(0,0);
-	c=a*b;
+	c=a/b;
 	c.print();
 }
