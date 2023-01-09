@@ -105,10 +105,9 @@ void viewGradecard(){
 	
 	}
 
-gradeCard gd1;
-
 int main()
 {
+	gradeCard gd1;
 	student st1;
 	teacher tchr1;
 	st1.getpersonaldetails();
