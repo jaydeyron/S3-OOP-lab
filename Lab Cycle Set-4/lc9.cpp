@@ -4,11 +4,10 @@
 
 using namespace std;
 
-class string{
+class strings{
 	public:
-		{
 			char s[50];
-			string operator +(string const &obj)
+			/*string operator +(string const &obj)
 			{
 				
 			}
@@ -31,21 +30,41 @@ class string{
 			string operator --(string const &obj)
 			{
 				
-			}
-			void strLength()
+			}*/
+			void addStrings(int f)
 			{
+			    for(int i=0;i<f;i++)
+			        {
+			            cout<<"\nEnter "<<i+1<<" string:\t";
+			            cin>>s[i];
+			        }
+			}
+			void printStr()
+			{
+			    for(int i=0;i<50;i++)
+			    {
+			        if(s[i]!='\0')
+			        {
+			            cout<<s[i]<<endl;
+			        }
+			    }
+			}
+			void strLength(int n)
+			{
+			    int c=0;
 				for(int i=0;i<n;i++)
 				{
-					
+					if(s[i]!='\0')
+					{
+					    c=c+1;
+					}
 				}
 			}
-		}
 };
 
 int main()
 {
-	int x1,y1;
-	point p;
+    strings st;
 	int ch;
 	while(1)
 	{
@@ -56,6 +75,12 @@ int main()
 		switch(ch)
 		{
 			case 1:{
+			        int f;
+			        cout<<"Enter the number of strings to add:\t";
+			        cin>>f;
+			        st.addStrings(f);
+			        st.printStr();
+			        st.strLength(f);
 					break;
 				}
 			case 2:{
