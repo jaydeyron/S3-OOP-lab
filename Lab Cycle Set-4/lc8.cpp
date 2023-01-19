@@ -5,8 +5,10 @@
 using namespace std;
 
 class point{
-	public:
+	private:
 		int x,y;
+	public:
+		//int x,y;
 		point()
 		{
 			x=0;
@@ -63,6 +65,7 @@ class point{
 int main()
 {
 	int x1,y1;
+	int gx,gy;
 	point p;
 	int ch;
 	while(1)
@@ -77,6 +80,7 @@ int main()
 					//int x1;
 					cout<<"Enter number:\t";
 					cin>>x1;
+					gx=x1;
 					p.setX(x1);
 					//cout<<p.x;
 					break;
@@ -85,30 +89,33 @@ int main()
 					//int y1;
 					cout<<"Enter number:\t";
 					cin>>y1;
+					gy=y1;
 					p.setY(y1);
 					break;
 				}
 			case 3:{
 					cout<<"\nEnter number:\t";
 					cin>>x1;
+					gx=x1;
 					cout<<"\nEnter second number:\t";
 					cin>>y1;
+					gy=y1;
 					p.setXY(x1,y1);
 					break;
 				}
 			case 4:{
-					cout<<p.x<<"+"<<p.y<<endl;
-					p.sum(p.x,p.y);
+					cout<<gx<<"+"<<gy<<endl;
+					p.sum(gx,gy);
 					break;		
 				}
 			case 5:{
 					//cout<<x1<<endl;
-					p.sum(p.x);
+					p.sum(gx);
 					break;	
 				}
 			case 6:{
 					//cout<<y1<<endl;
-					p.sum(p.y);
+					p.sum(gy);
 					break;
 				}
 			case 7:{
