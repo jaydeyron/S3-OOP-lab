@@ -40,13 +40,13 @@ class point{
 		}
 		void sum(int a)
 		{
-			int r,s;
-			int temp=a;
-			while(temp>0)
+			int r,s=0;
+			int t=a;
+			while(t>0)
 			{
-				r=temp%10;
+				r=t%10;
 				s=s+r;
-				temp=temp/10;
+				t=t/10;
 			}
 			cout<<"Sum of digits of "<<a<<" is "<<s;
 		}
@@ -65,7 +65,7 @@ class point{
 int main()
 {
 	int x1,y1;
-	int gx,gy;
+	//int gx,gy;
 	point p;
 	int ch;
 	while(1)
@@ -80,7 +80,6 @@ int main()
 					//int x1;
 					cout<<"Enter number:\t";
 					cin>>x1;
-					gx=x1;
 					p.setX(x1);
 					//cout<<p.x;
 					break;
@@ -89,33 +88,30 @@ int main()
 					//int y1;
 					cout<<"Enter number:\t";
 					cin>>y1;
-					gy=y1;
 					p.setY(y1);
 					break;
 				}
 			case 3:{
 					cout<<"\nEnter number:\t";
 					cin>>x1;
-					gx=x1;
 					cout<<"\nEnter second number:\t";
 					cin>>y1;
-					gy=y1;
 					p.setXY(x1,y1);
 					break;
 				}
 			case 4:{
-					cout<<gx<<"+"<<gy<<endl;
-					p.sum(gx,gy);
+					cout<<x1<<"+"<<y1<<endl;
+					p.sum(x1,y1);
 					break;		
 				}
 			case 5:{
 					//cout<<x1<<endl;
-					p.sum(gx);
+					p.sum(x1);
 					break;	
 				}
 			case 6:{
 					//cout<<y1<<endl;
-					p.sum(gy);
+					p.sum(y1);
 					break;
 				}
 			case 7:{
