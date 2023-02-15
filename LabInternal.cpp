@@ -1,4 +1,3 @@
-/*
 #include<iostream>
 using std::cout,std::cin,std::endl;
 
@@ -54,4 +53,3 @@ int main()
     m3=m1*m2;
     m3.displayMat();
 }
-*/
